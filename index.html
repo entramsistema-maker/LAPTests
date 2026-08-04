@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LAP Fight League: eventos, peleadores, ranking y registros.">
+  <title>LAP Fight League</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">LAP <span>FIGHT LEAGUE</span></a>
+      <button id="menuButton" class="menu-button" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      <ul id="menu" class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#roster">Roster</a></li>
+        <li><a href="#ranking">Ranking</a></li>
+        <li><a href="#registro-peleadores">Registro Peleadores</a></li>
+        <li><a href="#registro-prensa">Registro Prensa</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">LATIN AMERICAN PROSPECTS</span>
+        <h1>El futuro de las MMA está aquí.</h1>
+        <p>LAP Fight League impulsa a los mejores prospectos de Latinoamérica mediante eventos profesionales, rankings y oportunidades reales.</p>
+        <div class="actions">
+          <a class="button gold" href="#eventos">Próximo evento</a>
+          <a class="button outline" href="#registro-peleadores">Regístrate</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <span>LAP 07</span>
+        <h2>The Next Generation</h2>
+        <p>Nueva cartelera, nuevos talentos y una sola jaula.</p>
+        <a href="#eventos">Ver información →</a>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section light">
+      <div class="container two-columns">
+        <div class="image-panel about-image"></div>
+        <div>
+          <span class="eyebrow">ABOUT US</span>
+          <h2 class="section-title">Construimos el camino de los próximos campeones.</h2>
+          <p>LAP Fight League es una plataforma competitiva para peleadores emergentes, equipos y entrenadores que buscan competir, crecer y demostrar su nivel.</p>
+          <p>Conectamos talento, espectáculo y desarrollo deportivo mediante eventos de alto nivel, rankings transparentes y exposición profesional.</p>
+          <div class="stats">
+            <div><strong>15+</strong><span>Combates por evento</span></div>
+            <div><strong>50+</strong><span>Prospectos evaluados</span></div>
+            <div><strong>LATAM</strong><span>Talento internacional</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="eventos" class="section dark">
+      <div class="container">
+        <span class="eyebrow">EVENTOS</span>
+        <h2 class="section-title">Noches que definen carreras.</h2>
+        <div class="cards events-grid">
+          <article class="card feature"><div class="card-image event-main"></div><div class="card-body"><span>PRÓXIMO EVENTO</span><h3>LAP 07</h3><p>Cartelera profesional con los prospectos más destacados de la región.</p><a href="#">Ver cartelera →</a></div></article>
+          <article class="card"><div class="card-image event-prev"></div><div class="card-body"><span>EVENTO ANTERIOR</span><h3>LAP 06</h3><p>Resultados, fotografías y combates destacados.</p><a href="#">Ver resultados →</a></div></article>
+          <article class="card"><div class="card-image event-archive"></div><div class="card-body"><span>ARCHIVO</span><h3>Historial LAP</h3><p>Consulta todas las ediciones de la liga.</p><a href="#">Explorar →</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION DE VIDEOS-->
+
+    <!-- VIDEOS DE PELEAS -->
+<section id="videos" class="section youtube-section">
+  <div class="container">
+
+    <div class="youtube-header">
+      <div>
+        <span class="eyebrow">PELEAS LAP</span>
+
+        <h2 class="section-title">
+          Revive nuestros mejores combates.
+        </h2>
+
+        <p class="youtube-description">
+          Disfruta peleas completas, momentos destacados y contenido
+          oficial de LAP Fight League.
+        </p>
+      </div>
+
+      <a
+        class="youtube-channel-link"
+        href="https://www.youtube.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visitar canal de YouTube →
+      </a>
+    </div>
+
+    <div
+      class="youtube-carousel"
+      id="youtube-carousel"
+      aria-label="Carrusel de peleas de LAP Fight League"
+    >
+
+      <div class="youtube-viewport">
+        <div
+          class="youtube-track"
+          id="youtube-track"
+        >
+          <!-- Los videos se generan con JavaScript -->
+        </div>
+      </div>
+
+      <button
+        class="youtube-button youtube-prev"
+        id="youtube-prev"
+        type="button"
+        aria-label="Mostrar video anterior"
+      >
+        &#10094;
+      </button>
+
+      <button
+        class="youtube-button youtube-next"
+        id="youtube-next"
+        type="button"
+        aria-label="Mostrar siguiente video"
+      >
+        &#10095;
+      </button>
+
+      <div
+        class="youtube-indicators"
+        id="youtube-indicators"
+      ></div>
+
+    </div>
+
+  </div>
+</section>
+
+
+    <section id="roster" class="section light">
+      <div class="container">
+        <span class="eyebrow">ROSTER DE PELEADORES</span>
+        <h2 class="section-title">Atletas listos para dejar su marca.</h2>
+        <div class="fighters">
+          <article class="fighter"><div class="fighter-image f1"></div><div><span>Peso ligero</span><h3>Nombre del peleador</h3><p>Récord 7-1-0</p></div></article>
+          <article class="fighter"><div class="fighter-image f2"></div><div><span>Peso gallo</span><h3>Nombre del peleador</h3><p>Récord 6-0-0</p></div></article>
+          <article class="fighter"><div class="fighter-image f3"></div><div><span>Peso pluma</span><h3>Nombre del peleador</h3><p>Récord 8-2-0</p></div></article>
+          <article class="fighter"><div class="fighter-image f4"></div><div><span>Peso wélter</span><h3>Nombre del peleador</h3><p>Récord 5-1-0</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ranking" class="section ranking">
+      <div class="container two-columns">
+        <div><span class="eyebrow">RANKING LAP</span><h2 class="section-title">Clasificación oficial de prospectos.</h2><p>Basada en desempeño, actividad, oposición y resultados dentro de la liga.</p></div>
+        <div class="ranking-table">
+          <div class="rank head"><span>Pos.</span><span>Peleador</span><span>División</span><span>Récord</span></div>
+          <div class="rank"><strong>01</strong><span>Peleador 1</span><span>Ligero</span><span>7-1-0</span></div>
+          <div class="rank"><strong>02</strong><span>Peleador 2</span><span>Gallo</span><span>6-0-0</span></div>
+          <div class="rank"><strong>03</strong><span>Peleador 3</span><span>Pluma</span><span>8-2-0</span></div>
+          <div class="rank"><strong>04</strong><span>Peleador 4</span><span>Wélter</span><span>5-1-0</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="registro-peleadores" class="section dark">
+      <div class="container form-layout">
+        <div><span class="eyebrow">REGISTRO DE PROSPECTOS</span><h2 class="section-title">Tu oportunidad comienza aquí.</h2><p>Completa tu perfil deportivo para ser considerado en próximas carteleras.</p></div>
+        <form class="form dark-form">
+          <input type="text" placeholder="Nombre completo" required>
+          <input type="text" placeholder="Apodo">
+          <input type="text" placeholder="División">
+          <input type="text" placeholder="Récord">
+          <input class="full" type="text" placeholder="Gimnasio y entrenador">
+          <textarea class="full" placeholder="Experiencia, títulos y enlaces de combate"></textarea>
+          <button class="button gold" type="submit">Enviar registro</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="registro-prensa" class="section light">
+      <div class="container form-layout">
+        <div><span class="eyebrow">REGISTRO DE PRENSA</span><h2 class="section-title">Solicita tu acreditación.</h2><p>Para medios, fotógrafos, periodistas y creadores de contenido.</p></div>
+        <form class="form light-form">
+          <input type="text" placeholder="Nombre completo" required>
+          <input type="text" placeholder="Medio o plataforma" required>
+          <input type="email" placeholder="Correo electrónico" required>
+          <input type="text" placeholder="Tipo de cobertura">
+          <textarea class="full" placeholder="Enlaces, alcance y plan de cobertura"></textarea>
+          <button class="button black" type="submit">Solicitar acreditación</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="brand" href="#home">LAP <span>FIGHT LEAGUE</span></a><p>El futuro de las artes marciales mixtas en Latinoamérica.</p></div>
+      <div><h4>Navegación</h4><a href="#about">About Us</a><a href="#eventos">Eventos</a><a href="#roster">Roster</a><a href="#ranking">Ranking</a></div>
+      <div><h4>Registros</h4><a href="#registro-peleadores">Prospectos</a><a href="#registro-prensa">Prensa</a></div>
+      <div><h4>Redes</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a><a href="#">TikTok</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

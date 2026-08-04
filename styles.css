@@ -1,0 +1,420 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#070707;color:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{width:min(90%,1220px);margin:auto}
+.section{padding:105px 0}
+.light{background:#f5f3ee;color:#0b0b0b}
+.dark{background:#0b0b0b}
+.eyebrow{display:inline-block;margin-bottom:14px;color:#c9a85c;font-size:.76rem;font-weight:800;letter-spacing:.18em}
+.section-title{max-width:760px;margin-bottom:24px;font-size:clamp(2.5rem,5vw,4.4rem);line-height:1;letter-spacing:-.055em}
+.navbar{position:fixed;inset:0 0 auto;z-index:1000;background:rgba(7,7,7,.86);border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px)}
+.nav-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;flex-direction:column;font-size:1.4rem;font-weight:900;line-height:.9}
+.brand span{margin-top:5px;color:#c9a85c;font-size:.55rem;letter-spacing:.18em}
+.menu{display:flex;gap:22px}.menu a{color:#bbb;font-size:.83rem}
+.menu a:hover{color:#fff}.menu-button{display:none;background:none;border:0}
+.menu-button span{display:block;width:26px;height:2px;margin:5px;background:#fff}
+.hero{min-height:100svh;background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.45)),url('imagenes/peleaLAP.jpg') center/cover no-repeat}
+.hero-grid{min-height:100svh;display:grid;grid-template-columns:1.2fr .7fr;gap:80px;align-items:center;padding-top:120px}
+.hero h1{max-width:850px;margin-bottom:26px;font-size:clamp(4rem,8vw,8rem);line-height:.85;letter-spacing:-.075em;text-transform:uppercase}
+.hero p{max-width:670px;color:#bbb}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.button{display:inline-flex;justify-content:center;align-items:center;min-height:50px;padding:12px 25px;border:1px solid transparent;border-radius:999px;font-weight:800}
+.gold{background:#c9a85c;color:#070707}
+.outline{border-color:#777;background:rgba(255,255,255,.05)}
+.black{background:#070707;color:#fff}
+.hero-card{align-self:end;margin-bottom:70px;padding:30px;border:1px solid #555;border-radius:28px;background:rgba(0,0,0,.62);backdrop-filter:blur(14px)}
+.hero-card>span,.card-body>span,.fighter span{color:#c9a85c;font-size:.75rem;font-weight:800}
+.hero-card h2{margin:15px 0;font-size:2.3rem}
+.hero-card p{margin-bottom:22px}
+.hero-card a,.card a{color:#d9bd7a;font-weight:700}
+.two-columns,.form-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:75px;align-items:center}
+.image-panel{min-height:540px;border-radius:28px;background:center/cover no-repeat}
+.about-image{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.45)),url('imagenes/about-lap.jpg')}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.stats div{border-top:1px solid #bbb;padding-top:18px}
+.stats strong,.stats span{display:block}
+.stats strong{font-size:2rem}
+.stats span{color:#666;font-size:.85rem}
+.events-grid{display:grid;grid-template-columns:1.25fr .8fr;gap:22px}
+.card{overflow:hidden;border:1px solid #333;border-radius:24px;background:#111}
+.feature{grid-row:span 2}.card-image{min-height:260px;background:center/cover no-repeat}
+.feature .card-image{min-height:470px}.event-main{background-image:url('imagenes/evento-principal.jpg')}
+.event-prev{background-image:url('imagenes/evento-anterior.jpg')}
+.event-archive{background-image:url('imagenes/evento-archivo.jpg')}
+.card-body{padding:27px}
+.card-body h3{margin:8px 0;font-size:1.8rem}
+.card-body p{color:#999;margin-bottom:14px}
+.fighters{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.fighter{overflow:hidden;border-radius:22px;background:#fff;box-shadow:0 18px 45px rgba(0,0,0,.1)}
+.fighter-image{min-height:390px;background:#222 center top/cover no-repeat}
+.f1{background-image:url('imagenes/peleador-1.jpg')}
+.f2{background-image:url('imagenes/peleador-2.jpg')}
+.f3{background-image:url('imagenes/peleador-3.jpg')}
+.f4{background-image:url('imagenes/peleador-4.jpg')}
+.fighter>div:last-child{padding:22px}
+.fighter h3{margin:6px 0}
+.fighter p{color:#666}
+.ranking{background:linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.75)),url('imagenes/ranking-bg.jpg') center/cover fixed}
+.ranking-table{overflow:hidden;border:1px solid #333;border-radius:22px;background:rgba(0,0,0,.68)}
+.rank{display:grid;grid-template-columns:65px 1.4fr 1fr 80px;gap:15px;padding:20px;border-bottom:1px solid #333}
+.rank:last-child{border-bottom:0}
+.head{background:#c9a85c;color:#070707;font-weight:800}
+.rank strong{color:#c9a85c}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:35px;border-radius:24px}
+.dark-form{border:1px solid #333;background:#111}.light-form{background:#fff;box-shadow:0 20px 55px rgba(0,0,0,.1)}
+.form input,.form textarea{width:100%;padding:14px;border:1px solid #444;border-radius:10px;background:transparent;color:inherit}
+.light-form input,.light-form textarea{border-color:#ddd;color:#111}
+.form textarea{min-height:125px}
+.full{grid-column:1/-1}
+.footer{padding:75px 0;background:#030303;border-top:1px solid #222}
+.footer-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:35px}
+.footer-grid div:not(:first-child){display:flex;flex-direction:column;gap:9px}
+.footer h4{color:#c9a85c;margin-bottom:10px}
+.footer p,.footer a{color:#888}@media(max-width:950px){.hero-grid,.two-columns,.form-layout{grid-template-columns:1fr}
+.events-grid{grid-template-columns:1fr}
+.feature{grid-row:auto}
+.fighters{grid-template-columns:repeat(2,1fr)}
+.hero-card{margin-bottom:0;max-width:620px}
+.footer-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){.menu-button{display:block}
+.menu{position:absolute;top:76px;left:0;right:0;display:none;flex-direction:column;padding:25px 5%;background:#070707}
+.menu.active{display:flex}
+.hero h1{font-size:clamp(3.4rem,17vw,5.5rem)}
+.fighters,.stats,.form,.footer-grid{grid-template-columns:1fr}
+.full{grid-column:auto}.rank{grid-template-columns:55px 1fr 80px}
+.rank span:nth-child(3){display:none}}
+
+
+
+/* =========================================================
+   CARRUSEL DE YOUTUBE
+========================================================= */
+
+.youtube-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(201, 168, 92, 0.13),
+      transparent 32%
+    ),
+    #070707;
+
+  color: #ffffff;
+}
+
+.youtube-section::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.025),
+      transparent 45%
+    );
+
+  content: "";
+  pointer-events: none;
+}
+
+.youtube-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.youtube-description {
+  max-width: 690px;
+  color: #999999;
+  font-size: 1.04rem;
+}
+
+.youtube-channel-link {
+  flex-shrink: 0;
+
+  color: #c9a85c;
+
+  font-size: 0.92rem;
+  font-weight: 800;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.youtube-channel-link:hover {
+  color: #e4ca88;
+  transform: translateX(4px);
+}
+
+
+/* CONTENEDOR DEL CARRUSEL */
+
+.youtube-carousel {
+  position: relative;
+  width: 100%;
+}
+
+.youtube-viewport {
+  width: 100%;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+
+  background-color: #101010;
+
+  box-shadow:
+    0 28px 75px rgba(0, 0, 0, 0.38);
+}
+
+.youtube-track {
+  display: flex;
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change: transform;
+}
+
+
+/* CADA VIDEO */
+
+.youtube-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.youtube-video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  background-color: #000000;
+}
+
+.youtube-video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+}
+
+.youtube-video-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  padding: 26px 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  background-color: #101010;
+}
+
+.youtube-video-number {
+  color: #c9a85c;
+
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.youtube-video-info h3 {
+  margin-top: 5px;
+
+  color: #ffffff;
+
+  font-size: clamp(1.2rem, 2.4vw, 1.75rem);
+  line-height: 1.15;
+}
+
+.youtube-open-link {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+  padding: 10px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  font-size: 0.83rem;
+  font-weight: 700;
+
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.youtube-open-link:hover {
+  border-color: #c9a85c;
+  background-color: #c9a85c;
+  color: #070707;
+}
+
+
+/* BOTONES DEL CARRUSEL */
+
+.youtube-button {
+  position: absolute;
+  top: 42%;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+
+  font-size: 1.1rem;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transform: translateY(-50%);
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.youtube-button:hover {
+  border-color: #c9a85c;
+  background-color: #c9a85c;
+  color: #070707;
+
+  transform:
+    translateY(-50%)
+    scale(1.07);
+}
+
+.youtube-prev {
+  left: 18px;
+}
+
+.youtube-next {
+  right: 18px;
+}
+
+
+/* INDICADORES */
+
+.youtube-indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  margin-top: 22px;
+}
+
+.youtube-indicator {
+  width: 9px;
+  height: 9px;
+
+  border: none;
+  border-radius: 999px;
+
+  background-color: rgba(255, 255, 255, 0.28);
+
+  cursor: pointer;
+
+  transition:
+    width 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.youtube-indicator.active {
+  width: 30px;
+  background-color: #c9a85c;
+}
+
+
+/* ESTADO SIN VIDEOS */
+
+.youtube-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 420px;
+  padding: 40px;
+
+  color: #888888;
+  text-align: center;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .youtube-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .youtube-viewport {
+    border-radius: 20px;
+  }
+
+  .youtube-video-info {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 21px 19px;
+  }
+
+  .youtube-open-link {
+    width: 100%;
+  }
+
+  .youtube-button {
+    top: 38%;
+
+    width: 41px;
+    height: 41px;
+  }
+
+  .youtube-prev {
+    left: 9px;
+  }
+
+  .youtube-next {
+    right: 9px;
+  }
+}
