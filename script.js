@@ -45,7 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const youtubeVideos = [
     "https://www.youtube.com/watch?v=fI2aZyh4KNc",
     "https://www.youtube.com/watch?v=lGUccLBC80Y",
-    "https://www.youtube.com/watch?v=M078GNaisas"
+    "https://www.youtube.com/watch?v=M078GNaisas",
+    "https://www.youtube.com/watch?v=YJPpy-wNBpA"
   ];
 
   const youtubeTrack =
