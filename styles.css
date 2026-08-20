@@ -32,7 +32,7 @@ ul{list-style:none}
 .hero-card a,.card a{color:#d9bd7a;font-weight:700}
 .two-columns,.form-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:75px;align-items:center}
 .image-panel{min-height:540px;border-radius:28px;background:center/cover no-repeat}
-.about-image{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.45)),url('imagenes/about-lap.jpg')}
+.about-image{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.45)),url('imagenes/santiago.jpg')}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
 .stats div{border-top:1px solid #bbb;padding-top:18px}
 .stats strong,.stats span{display:block}
@@ -41,23 +41,24 @@ ul{list-style:none}
 .events-grid{display:grid;grid-template-columns:1.25fr .8fr;gap:22px}
 .card{overflow:hidden;border:1px solid #333;border-radius:24px;background:#111}
 .feature{grid-row:span 2}.card-image{min-height:260px;background:center/cover no-repeat}
-.feature .card-image{min-height:470px}.event-main{background-image:url('imagenes/evento-principal.jpg')}
-.event-prev{background-image:url('imagenes/evento-anterior.jpg')}
-.event-archive{background-image:url('imagenes/evento-archivo.jpg')}
+.feature .card-image{min-height:470px}.event-main{background-image:url('imagenes/chingaderaconIA.JPEG')}
+.event-prev{background-image:url('imagenes/edicion6.jpg')}
+.event-archive{background-image:url('imagenes/edicion5.jpg')}
 .card-body{padding:27px}
 .card-body h3{margin:8px 0;font-size:1.8rem}
 .card-body p{color:#999;margin-bottom:14px}
 .fighters{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .fighter{overflow:hidden;border-radius:22px;background:#fff;box-shadow:0 18px 45px rgba(0,0,0,.1)}
 .fighter-image{min-height:390px;background:#222 center top/cover no-repeat}
-.f1{background-image:url('imagenes/peleador-1.jpg')}
-.f2{background-image:url('imagenes/peleador-2.jpg')}
-.f3{background-image:url('imagenes/peleador-3.jpg')}
-.f4{background-image:url('imagenes/peleador-4.jpg')}
+.f1{background-image:url('imagenes/triplej.jpg')}
+.f2{background-image:url('imagenes/santiago1.jpg')}
+.f3{background-image:url('imagenes/doedk.jpg')}
+.f4{background-image:url('imagenes/edgarmiguel.jpg')}
+
 .fighter>div:last-child{padding:22px}
 .fighter h3{margin:6px 0}
 .fighter p{color:#666}
-.ranking{background:linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.75)),url('imagenes/ranking-bg.jpg') center/cover fixed}
+.ranking{background:linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.75)),url('imagenes/cameras.jpg') center/cover fixed}
 .ranking-table{overflow:hidden;border:1px solid #333;border-radius:22px;background:rgba(0,0,0,.68)}
 .rank{display:grid;grid-template-columns:65px 1.4fr 1fr 80px;gap:15px;padding:20px;border-bottom:1px solid #333}
 .rank:last-child{border-bottom:0}
@@ -416,5 +417,212 @@ ul{list-style:none}
 
   .youtube-next {
     right: 9px;
+  }
+}
+
+/* =========================================================
+   FONDOS AMBIENTALES POR SECCIÓN
+   Cada sección usa una fotografía distinta.
+========================================================= */
+
+.ambient-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.ambient-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/*
+  La imagen se declara individualmente en index.html:
+
+  <div
+    class="ambient-bg"
+    style="--ambient-image: url('imagenes/archivo.jpg');"
+  ></div>
+*/
+
+.ambient-bg {
+  position: absolute;
+  inset: -28px;
+  z-index: 0;
+
+  background-image: var(--ambient-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: blur(3px);
+  transform: scale(1.035);
+
+  opacity: 0.54;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.ambient-dark::after,
+.ambient-light::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  content: "";
+  pointer-events: none;
+}
+
+/* =========================================
+   SECCIONES OSCURAS
+========================================= */
+
+.ambient-dark::after {
+  background:
+    radial-gradient(
+      circle at 78% 18%,
+      rgba(201, 168, 92, 0.08),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7, 7, 7, 0.54) 0%,
+      rgba(7, 7, 7, 0.76) 100%
+    );
+}
+
+.ambient-dark .ambient-bg {
+  opacity: 0.56;
+}
+
+
+/* =========================================
+   SECCIONES CLARAS
+   About Us, Roster y Registro de Prensa
+========================================= */
+
+.ambient-light::after {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(245, 243, 238, 0.48) 0%,
+      rgba(245, 243, 238, 0.72) 100%
+    );
+}
+
+.ambient-light .ambient-bg {
+  opacity: 0.40;
+  filter: blur(0px);
+}
+
+/*
+  Un poco de contraste detrás del contenido en secciones claras,
+  sin convertirlas en tarjetas pesadas.
+*/
+
+#about.ambient-light > .container,
+#roster.ambient-light > .container,
+#registro-prensa.ambient-light > .container {
+  position: relative;
+}
+
+/* Mantener identidad base de cada sección */
+
+#about.ambient-section,
+#roster.ambient-section,
+#registro-prensa.ambient-section {
+  background-color: #f5f3ee;
+}
+
+#eventos.ambient-section,
+#videos.ambient-section,
+#ranking.ambient-section,
+#registro-peleadores.ambient-section {
+  background-color: #070707;
+}
+
+/* El ranking ya no necesita su background anterior porque
+   ahora recibe su imagen desde .ambient-bg. */
+
+#ranking.ambient-section {
+  background-image: none;
+}
+
+/* El bloque de YouTube tenía un pseudo fondo propio.
+   Lo apagamos para que no compita con su nueva fotografía. */
+
+#videos.ambient-section::before {
+  display: none;
+}
+
+
+/* =========================================
+   SEPARACIÓN ENTRE SECCIONES
+========================================= */
+
+.ambient-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.ambient-light {
+  border-top-color: rgba(7, 7, 7, 0.07);
+  border-bottom-color: rgba(7, 7, 7, 0.07);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 950px) {
+  .ambient-bg {
+    inset: -24px;
+    filter: blur(0px);
+    transform: scale(1.045);
+  }
+
+  .ambient-light .ambient-bg {
+    filter: blur(0px);
+    opacity: 0.36;
+  }
+}
+
+@media (max-width: 760px) {
+  .ambient-bg {
+    inset: -18px;
+    filter: blur(0px);
+    transform: scale(1.055);
+    opacity: 0.46;
+  }
+
+  .ambient-light .ambient-bg {
+    opacity: 0.30;
+    filter: blur(0px);
+  }
+
+  .ambient-dark::after {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7, 7, 7, 0.62) 0%,
+        rgba(7, 7, 7, 0.80) 100%
+      );
+  }
+
+  .ambient-light::after {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(245, 243, 238, 0.58) 0%,
+        rgba(245, 243, 238, 0.78) 100%
+      );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-bg {
+    transform: none;
   }
 }
